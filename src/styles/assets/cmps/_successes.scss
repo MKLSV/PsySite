@@ -1,0 +1,80 @@
+.succes-cont {
+  background-color: #fff;
+  padding: 1.3rem 2rem; // Увеличил отступы для лучшего визуального восприятия
+
+  .successes {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; // Добавил промежуток между элементами
+    max-width: 1200px; // Ограничил ширину контейнера
+    margin: 0 auto; // Центрирование контейнера
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem; // Увеличил промежуток между элементами
+      text-align: center; // Центрируем текст
+      flex: 1; // Равномерное распределение пространства
+
+      .count {
+        color: #d39999;
+        font-size: 3rem;
+        letter-spacing: 1px;
+        font-weight: bold; // Добавил жирный шрифт для акцента
+      }
+
+      .line {
+        background-color: rgb(170, 170, 170);
+        height: 1px;
+        width: 80%; // Уменьшил ширину линии для лучшего визуального восприятия
+        margin: 0.5rem 0; // Отступы вокруг линии
+      }
+
+      .title {
+        font-size: 1.25rem; // Уменьшил размер шрифта для лучшей читаемости
+        letter-spacing: 1px;
+        color: #333; // Добавил цвет текста для контраста
+        line-height: 1.5; // Улучшил межстрочный интервал
+      }
+    }
+  }
+
+  /* Адаптивные стили */
+  @media (max-width: 768px) {
+    padding: 2rem 1rem; // Уменьшил отступы на мобильных устройствах
+
+    .successes {
+      flex-direction: column; // Элементы в столбец на мобильных
+      gap: 3rem; // Увеличил промежуток между элементами
+
+      .item {
+        width: 100%; // Элементы занимают всю ширину
+        max-width: 400px; // Ограничил ширину элементов
+        margin: 0 auto; // Центрирование элементов
+
+        .count {
+          font-size: 2.5rem; // Уменьшил размер шрифта для мобильных
+        }
+
+        .title {
+          font-size: 1.1rem; // Уменьшил размер шрифта для мобильных
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .successes {
+      .item {
+        .count {
+          font-size: 2rem; // Еще меньше размер шрифта для маленьких экранов
+        }
+
+        .title {
+          font-size: 1rem; // Еще меньше размер шрифта для маленьких экранов
+        }
+      }
+    }
+  }
+}

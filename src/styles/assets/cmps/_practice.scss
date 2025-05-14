@@ -1,0 +1,128 @@
+.practice {
+  padding: 4rem 2rem; // Увеличил отступы для лучшего визуального восприятия
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section-title {
+    text-align: center; // Центрируем заголовок
+    font-size: 2.5rem; // Увеличил размер заголовка
+    color: #333; // Добавил цвет текста
+    margin-bottom: 4rem; // Отступ снизу
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem; // Уменьшил промежуток между элементами
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      gap: 8rem; // Уменьшил промежуток между текстом и изображением
+      align-items: center;
+
+      // &:nth-child(even) {
+      //   flex-direction: row-reverse; // Четные элементы: изображение слева
+      // }
+
+      .text {
+        flex: 1; // Занимает доступное пространство
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; // Уменьшил промежуток между элементами
+        font-size: 1.24rem; // Уменьшил размер текста
+        color: #555; // Добавил цвет текста
+
+        .title {
+          font-size: 1.8rem; // Уменьшил размер заголовка
+          font-weight: 700;
+          color: #333; // Добавил цвет текста
+        }
+
+        span {
+          line-height: 1.6; // Улучшил межстрочный интервал
+        }
+      }
+
+      img {
+        flex: 1; // Занимает доступное пространство
+        max-width: 40%; // Ограничиваем ширину изображения
+        height: 300px; // Фиксированная высота изображения
+        object-fit: cover; // Сохраняем пропорции
+        border-radius: 20px; // Скругление углов
+      }
+    }
+  }
+
+  /* Адаптивные стили */
+  @media (max-width: 1024px) {
+    .content {
+      .item {
+        gap: 2rem; // Уменьшил промежуток между текстом и изображением
+
+        .text {
+          font-size: 1rem; // Уменьшил размер текста
+
+          .title {
+            font-size: 1.5rem; // Уменьшил размер заголовка
+          }
+        }
+
+        img {
+          height: 250px; // Уменьшил высоту изображения
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem; // Уменьшил отступы на мобильных устройствах
+
+    .section-title {
+      font-size: 2rem; // Уменьшил размер заголовка
+    }
+
+    .content {
+      .item {
+        flex-direction: column; // Текст и изображение в столбец
+        gap: 2rem; // Увеличил промежуток между текстом и изображением
+
+        &:nth-child(even) {
+          flex-direction: column; // Четные элементы: текст и изображение в столбец
+        }
+
+        .text {
+          width: 100%; // Текст занимает всю ширину
+          text-align: center; // Центрируем текст
+        }
+
+        img {
+          max-width: 100%; // Изображение занимает всю ширину
+          height: 200px; // Уменьшил высоту изображения
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.75rem; // Еще меньше размер заголовка
+    }
+
+    .content {
+      .item {
+        .text {
+          font-size: 0.9rem; // Еще меньше размер текста
+
+          .title {
+            font-size: 1.3rem; // Еще меньше размер заголовка
+          }
+        }
+
+        img {
+          height: 150px; // Еще меньше высота изображения
+        }
+      }
+    }
+  }
+}

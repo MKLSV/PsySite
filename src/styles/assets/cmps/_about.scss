@@ -1,0 +1,142 @@
+.about-page {
+  padding: 0rem 2rem; // Увеличил отступы для лучшего визуального восприятия
+  // background-color: #f9f9f9; // Добавил фон для выделения секции
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .section-title {
+    font-size: 2.5rem; // Увеличил размер заголовка
+    color: #333; // Добавил цвет текста
+    text-align: center; // Центрируем заголовок
+    margin-bottom: 4rem; // Отступ снизу
+    font-weight: 500;
+  }
+  
+  .content {
+    max-width: 1200px; // Ограничил ширину контейнера
+    margin: 0 auto; // Центрирование контейнера
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem; // Уменьшил промежуток между текстом и изображением
+    
+    .text {
+      flex: 1; // Занимает доступное пространство
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; // Увеличил промежуток между элементами
+      
+      h2 {
+        font-weight: 500;
+        font-size: 2rem; // Размер заголовка
+        color: #333; // Цвет текста
+      }
+
+      span {
+        font-size: 1.4rem; // Размер текста
+        color: #555; // Цвет текста
+        line-height: 1.6; // Улучшил межстрочный интервал
+      }
+
+      button {
+        width: 280px;
+        height: 55px;
+        background-color: #FF9187;
+        border: none;
+        border-radius: 18px;
+        color: white;
+        font-size: 1.6rem;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #ff3826;
+        }
+      }
+    }
+
+    img {
+      flex: 1; // Занимает доступное пространство
+      max-width: 35%; // Ограничиваем ширину изображения
+      height: auto; // Сохраняем пропорции
+      border-radius: 10px; // Скругление углов
+      object-fit: cover; // Сохраняем пропорции
+    }
+  }
+
+  /* Адаптивные стили */
+  @media (max-width: 1024px) {
+    .content {
+      gap: 2rem; // Уменьшил промежуток между текстом и изображением
+
+      .text {
+        h2 {
+          font-size: 1.5rem; // Уменьшил размер заголовка
+        }
+
+        span {
+          font-size: 1rem; // Уменьшил размер текста
+        }
+      }
+
+      img {
+        max-width: 40%; // Увеличил ширину изображения
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem; // Уменьшил отступы на мобильных устройствах
+
+    .section-title {
+      font-size: 2rem; // Уменьшил размер заголовка
+    }
+
+    .content {
+      flex-direction: column; // Текст и изображение в столбец
+      gap: 2rem; // Увеличил промежуток между текстом и изображением
+
+      .text {
+        text-align: center; // Центрируем текст
+
+        h2 {
+          font-size: 1.5rem; // Уменьшил размер заголовка
+        }
+
+        span {
+          font-size: 1rem; // Уменьшил размер текста
+        }
+
+        button {
+          margin: 0 auto; // Центрируем кнопку
+        }
+      }
+
+      img {
+        max-width: 100%; // Изображение занимает всю ширину
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.75rem; // Еще меньше размер заголовка
+    }
+
+    .content {
+      .text {
+        h2 {
+          font-size: 1.3rem; // Еще меньше размер заголовка
+        }
+
+        span {
+          font-size: 0.9rem; // Еще меньше размер текста
+        }
+      }
+    }
+  }
+}

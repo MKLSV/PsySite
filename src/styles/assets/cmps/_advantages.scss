@@ -1,0 +1,96 @@
+.advantages {
+  padding: 4rem 2rem; // Увеличил отступы для лучшего визуального восприятия
+  background-color: #FFF; // Добавил фон для выделения секции
+
+  .content {
+    max-width: 1200px; // Ограничил ширину контейнера
+    margin: 0 auto; // Центрирование контейнера
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-title {
+      font-size: 2rem; // Увеличил размер заголовка
+      color: #333; // Добавил цвет текста
+      text-align: center; // Центрируем заголовок
+      margin-bottom: 2rem; // Отступ снизу
+    }
+
+    .section-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // Фиксированно 3 колонки
+      gap: 2rem; // Промежуток между элементами
+      padding: 0; // Убрал лишние отступы
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; // Центрируем текст
+        // background-color: #fff; // Фон для карточки
+        border-radius: 15px; // Скругление углов
+        padding: 1.5rem; // Внутренние отступы
+        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Тень для карточки
+        transition: transform 0.3s ease, box-shadow 0.3s ease; // Плавные переходы
+
+        // &:hover {
+        //   transform: translateY(-5px); // Эффект поднятия при наведении
+        //   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Увеличение тени
+        // }
+
+        img {
+          width: 60px; // Размер иконки
+          height: 60px; // Размер иконки
+          margin-bottom: 1rem; // Отступ снизу
+          
+        }
+
+        .title {
+          font-size: 1rem; // Размер шрифта
+          color: #555; // Цвет текста
+          line-height: 1.5; // Улучшил межстрочный интервал
+        }
+      }
+    }
+  }
+
+  /* Адаптивные стили */
+  @media (max-width: 1024px) {
+    .content {
+      .section-list {
+        grid-template-columns: repeat(2, 1fr); // 2 колонки на планшетах
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem; // Уменьшил отступы на мобильных устройствах
+
+    .content {
+      .section-title {
+        font-size: 1.75rem; // Уменьшил размер заголовка
+      }
+
+      .section-list {
+        grid-template-columns: 1fr; // Одна колонка на мобильных
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      .section-title {
+        font-size: 1.5rem; // Еще меньше размер заголовка
+      }
+
+      .section-list {
+        .item {
+          padding: 1rem; // Уменьшил отступы внутри карточек
+          .title {
+            font-size: 0.9rem; // Уменьшил размер текста
+          }
+        }
+      }
+    }
+  }
+}
