@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="about-page">
+    <div className="about">
       <h1 className="section-title">Обо мне</h1>
       <div className="content">
         <div className="text">

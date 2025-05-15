@@ -2,6 +2,8 @@
   height: 200px; // Фиксированная высота
   position: relative;
   overflow: hidden; // Обрезаем изображение, если оно выходит за границы
+  background-color: #408e8f;
+  border-bottom: white 2px solid;
   img {
     width: 100%;
     height: 100%;
@@ -32,8 +34,7 @@
     }
 
     button {
-      width: 280px;
-      height: 55px;
+      padding: 1rem;
       background-color: #ff9187;
       border: none;
       border-radius: 18px;

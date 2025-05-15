@@ -39,7 +39,7 @@ export default function Header() {
             <Link href="/activities">Направления работы</Link>
           </li>
           <li>
-            <Link href="/about">Обо мне</Link>
+            <Link href="/about-work">О работе</Link>
           </li>
           <li>
             <Link href="/services">Услуги</Link>

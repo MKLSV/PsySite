@@ -1,5 +1,5 @@
-.about {
-  padding:  2rem; // Увеличил отступы для лучшего визуального восприятия
+.about-work {
+  padding: 2rem; // Увеличил отступы для лучшего визуального восприятия
   // background-color: #f9f9f9; // Добавил фон для выделения секции
   display: flex;
   flex-direction: column;
@@ -14,54 +14,73 @@
     margin-bottom: 4rem; // Отступ снизу
     font-weight: 500;
   }
-  
+
   .content {
     max-width: 1200px; // Ограничил ширину контейнера
     margin: 0 auto; // Центрирование контейнера
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 4rem; // Уменьшил промежуток между текстом и изображением
-    
+    // align-items: center;
+    // gap: 3rem; // Уменьшил промежуток между текстом и изображением
+
     .text {
-      flex: 1; // Занимает доступное пространство
+      // flex: 1; // Занимает доступное пространство
       display: flex;
       flex-direction: column;
       gap: 1.5rem; // Увеличил промежуток между элементами
-      
-      h2 {
-        font-weight: 500;
-        font-size: 2rem; // Размер заголовка
-        color: #333; // Цвет текста
+      // padding: 0 2rem;
+      width: 110%;
+      height: 100%;
+
+      ul {
+        margin: 0;
+
+        li {
+          padding-bottom: 1rem;
+          font-size: 1.1rem;
+          color: #555;
+          &::marker {
+            color: rgb(255, 215, 211);
+          }
+        }
       }
+      .foot {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
-      span {
-        font-size: 1.4rem; // Размер текста
-        color: #555; // Цвет текста
-        line-height: 1.6; // Улучшил межстрочный интервал
-      }
+        .last-call {
+          font-size: 1.6rem; // Размер текста
+          color: #555; // Цвет текста
+          line-height: 1.6; // Улучшил межстрочный интервал
+          // text-align: end;
+          height: 100%;
+          padding: 0 2rem 0 2rem;
+        }
 
-      button {
-        width: 280px;
-        height: 55px;
-        background-color: #FF9187;
-        border: none;
-        border-radius: 18px;
-        color: white;
-        font-size: 1.6rem;
-        letter-spacing: 0.8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #ff3826;
+        button {
+          width: 280px;
+          height: 55px;
+          background-color: #ff9187;
+          border: none;
+          border-radius: 18px;
+          color: white;
+          font-size: 1.6rem;
+          letter-spacing: 0.8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: #ff3826;
+          }
         }
       }
     }
-
+    .img {
+      width: 100%;
+    }
     img {
-      flex: 1; // Занимает доступное пространство
-      max-width: 35%; // Ограничиваем ширину изображения
+      // flex: 1; // Занимает доступное пространство
+      max-width: 100%; // Ограничиваем ширину изображения
       height: auto; // Сохраняем пропорции
       border-radius: 10px; // Скругление углов
       object-fit: cover; // Сохраняем пропорции
